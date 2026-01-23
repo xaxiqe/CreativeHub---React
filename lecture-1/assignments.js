@@ -133,12 +133,12 @@
 // 1. Create a simple function called greet that prints a welcome message to the console.
 // Then, call the function multiple times to demonstrate how functions can be reused.
 
-function greet() {
-  console.log("Welcome");
-}
-greet();
-greet();
-greet();
+// function greet() {
+//   console.log("Welcome");
+// }
+// greet();
+// greet();
+// greet();
 
 // 2. Write a function called multiply that takes two parameters (numbers) and prints their
 // product. Call the function with different arguments to show how parameters work.
@@ -195,21 +195,21 @@ greet();
 // 7. Write a function called calculateTotalPrice that takes two parameters: price and
 // quantity. The function should return the total price by multiplying these values. Then,
 // call the function with different numbers to see how multiple arguments work.
-function calcTotalPrice(price, quantity) {
-  console.log(price * quantity);
-}
-calcTotalPrice(3, 5);
-calcTotalPrice(4, 9);
+// function calcTotalPrice(price, quantity) {
+//   console.log(price * quantity);
+// }
+// calcTotalPrice(3, 5);
+// calcTotalPrice(4, 9);
 
 // 8. Create an anonymous function that adds two numbers, and assign it to a variable
 // called sum. Then, convert it into an arrow function. This will help students understand
 // the difference between anonymous functions and arrow functions.
 
-const sum = function (a, b) {
-  return a + b;
-};
+// const sum = function (a, b) {
+//   return a + b;
+// };
 
-console.log(sum(3, 5));
+// console.log(sum(3, 5));
 
 /////////////////////////////////////////////////////////////
 //Callbacks
@@ -219,22 +219,51 @@ console.log(sum(3, 5));
 // as an argument. The processData function should call the callback function after it
 // prints "Processing data...".
 
-function processData(callback) {
-  console.log("Proccesing data..");
-  callback();
-}
-processData(function () {
-  console.log("Data processed!");
-});
+// function processData(callback) {
+//   console.log("Proccesing data..");
+//   callback();
+// }
+// processData(function () {
+//   console.log("Data processed!");
+// });
 
 // 2. Create a function called calculate that accepts two numbers and a callback function.
 // The callback function should handle different operations (such as adding, subtracting,
 // or multiplying the numbers). Use this pattern to demonstrate how callbacks can
 // handle dynamic functionality.
 
+function calculate(num1, num2, task) {
+  return task(num1, num2);
+}
+
+function addNumbers(a, b) {
+  return a + b;
+}
+function substractNumbers(a, b) {
+  return a - b;
+}
+function multiplyNumbers(a, b) {
+  return a * b;
+}
+
+console.log(calculate(2, 3, addNumbers));
+console.log(calculate(7, 3, substractNumbers));
+console.log(calculate(5, 3, multiplyNumbers));
+
 // 3. Write a function called delayedMessage that uses the setTimeout function to simulate
 // a delay. The function should accept a message and a callback function. After a delay
 // of 2 seconds, it should call the callback and print the message.
+
+const delayedMessage = (message, callback) => {
+  setTimeout(() => {
+    console.log(message);
+    callback();
+  }, 2000);
+};
+
+delayedMessage("Hiii", () => {
+  console.log("Message displayed after delay.");
+});
 
 // 4. Create a function fetchData that simulates fetching data from a server using a callback
 // for success and another callback for failure. The function should randomly decide
