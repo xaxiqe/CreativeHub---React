@@ -2,14 +2,25 @@
 // fact. Print the profile information to the console. Consider which variables will
 // change over time and which will stay the same fun
 // clear
+const name1 = "Vlon";
+let age1 = 33;
+let job = "Concierge";
+const funFact = "Loves Brazilian Jiu-Jitsu";
+
+console.log("Name:", name1);
+console.log("Age:", age1);
+console.log("Job:", job);
+console.log("Fun fact:", funFact);
+
 // 2. Write a program that converts temperatures from Celsius to Fahrenheit. Choose a
 // suitable type of variable for the conversion factor and the Celsius temperature.
 // Display the result of the conversion and then modify the Celsius value to perform
 // another conversion.
+const CELSIUS_TO_FAHRENHEIT_RATIO = 9 / 5;
+const FAHRENHEIT_FREEZING_POINT = 32;
 
-let tempCelsius = 1;
 const celToF = function (temp) {
-  return temp * 1.8 + 32;
+  return temp * CELSIUS_TO_FAHRENHEIT_RATIO + FAHRENHEIT_FREEZING_POINT;
 };
 console.log(celToF(36));
 
@@ -89,20 +100,23 @@ if (perosonAge > voteAge) {
 // score using if, else if, and else. Students should input their score, and the
 // program will output the corresponding grade.
 
-// let score = 9;
-// let grade;
+let score1 = 90;
+let grade;
 
-// if (score < 7) {
-//   grade = "You passed";
-// } else if (score > 8) {
-//   grade = "Impresive";
-// } else if (score === 10) {
-//   grade = "Exellent";
-// } else {
-//   grade = "Failed";
-// }
-// console.log(`Score: ${score}`);
-// console.log(`Grade: ${grade}`);
+if (score1 >= 90) {
+  grade = "A";
+} else if (score1 >= 80) {
+  grade = "B";
+} else if (score1 >= 70) {
+  grade = "C";
+} else if (score1 >= 55) {
+  grade = "D";
+} else {
+  grade = "Failed";
+}
+
+console.log(`Score: ${score1}`);
+console.log(`Grade: ${grade}`);
 
 ////////////////////////////////////////////////////////////////
 //Loops
@@ -302,7 +316,7 @@ console.log("After removing fruits:", favFruit);
 // only the even numbers.
 const evenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let i = 0; i <= evenNumbers.length; i++) {
-  if (i % 2 === 0) [console.log(i)];
+  if (i % 2 === 0) console.log(i);
 }
 
 // 4. Write a program that creates a new array where each number in the original array is
