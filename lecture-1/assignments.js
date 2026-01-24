@@ -232,39 +232,261 @@
 // or multiplying the numbers). Use this pattern to demonstrate how callbacks can
 // handle dynamic functionality.
 
-function calculate(num1, num2, task) {
-  return task(num1, num2);
-}
+// function calculate(num1, num2, task) {
+//   return task(num1, num2);
+// }
 
-function addNumbers(a, b) {
-  return a + b;
-}
-function substractNumbers(a, b) {
-  return a - b;
-}
-function multiplyNumbers(a, b) {
-  return a * b;
-}
+// function addNumbers(a, b) {
+//   return a + b;
+// }
+// function substractNumbers(a, b) {
+//   return a - b;
+// }
+// function multiplyNumbers(a, b) {
+//   return a * b;
+// }
 
-console.log(calculate(2, 3, addNumbers));
-console.log(calculate(7, 3, substractNumbers));
-console.log(calculate(5, 3, multiplyNumbers));
+// console.log(calculate(2, 3, addNumbers));
+// console.log(calculate(7, 3, substractNumbers));
+// console.log(calculate(5, 3, multiplyNumbers));
 
 // 3. Write a function called delayedMessage that uses the setTimeout function to simulate
 // a delay. The function should accept a message and a callback function. After a delay
 // of 2 seconds, it should call the callback and print the message.
 
-const delayedMessage = (message, callback) => {
-  setTimeout(() => {
-    console.log(message);
-    callback();
-  }, 2000);
-};
+// const delayedMessage = (message, callback) => {
+//   setTimeout(() => {
+//     console.log(message);
+//     callback();
+//   }, 2000);
+// };
 
-delayedMessage("Hiii", () => {
-  console.log("Message displayed after delay.");
-});
+// delayedMessage("Hiii", () => {
+//   console.log("Message displayed after delay.");
+// });
 
 // 4. Create a function fetchData that simulates fetching data from a server using a callback
 // for success and another callback for failure. The function should randomly decide
 // whether the request is successful or not, calling the appropriate callback.
+
+//Failed to solve
+
+////////////////////////////////////////////////
+//Arrays
+////////////////////////////////////////////////
+
+// 1. Write a program that creates an array of your favorite fruits. Then, print the first and
+// last fruit in the array.
+// const favFruits = ["apple", "banana", "blueberry", "strawberry", "orange"];
+// const firstFruit = favFruits[0];
+// const lastFruit = favFruits[favFruits.length - 1];
+
+// console.log("First fruit:", firstFruit);
+// console.log("Last fruit:", lastFruit);
+
+// // 2. Write a program that adds a new fruit to the beginning and the end of an array of
+// // fruits. Then, remove a fruit from the beginning and end.
+// const favFruit = ["apple", "banana", "blueberry", "strawberry", "orange"];
+
+// //add
+// favFruit.unshift("lemon");
+// favFruit.push("kiwi");
+// console.log("After adding fruits:", favFruit);
+
+// //remove
+// favFruit.shift();
+// favFruit.pop();
+// console.log("After removing fruits:", favFruit);
+
+// 3. Create a program that loops through an array of numbers using a for loop and prints
+// only the even numbers.
+// const evenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// for (let i = 0; i <= evenNumbers.length; i++) {
+//   if (i % 2 === 0) [console.log(i)];
+// }
+
+// 4. Write a program that creates a new array where each number in the original array is
+// multiplied by 2.
+// const num = [7, 4, 8, 2, 12];
+// const doubleNum = num.map((n) => n * 2);
+// console.log(doubleNum);
+
+// 5. Write a program that filters an array of numbers to create a new array that contains
+// only numbers greater than 5.
+// const numbers = [3, 4, 5, 6, 7, 8];
+// const greaterThanFive = numbers.filter((n) => n > 5);
+
+// console.log(greaterThanFive);
+
+// 6. Create a program that finds the first number in an array that is divisible by 3.
+// const numbers2 = [2, 4, 5, 12, 7, 9];
+// const isDividedBy3 = numbers2.find((num) => num % 3 === 0);
+// console.log(isDividedBy3);
+
+// 7. Write a program that sorts an array of numbers in ascending order using the sort
+// method. Then, reverse the order using the reverse method.
+// const numbers3 = [2, 4, 5, 12, 7, 9];
+// const ascOrder = numbers3.sort((a, b) => a - b);
+// const reverseOrder = ascOrder.slice().reverse();
+// console.log(ascOrder);
+// console.log(reverseOrder);
+
+// 8. Write a program that loops through an array of cities and prints each city name.
+// const cities = ["Peja", "New York City", "Tirana", "Tokyo", "Mallorca"];
+
+// for (let i = 0; i < cities.length; i++) {
+//   console.log(cities[i]);
+// }
+
+/////////////////////////////////////////////////////////////
+//Objects
+///////////////////////////////////////////////////////////////
+
+// 1. Write a program that creates an object to represent a car. The object should have
+// properties for make, model, and year. Print the object to the console.
+// const cars = {
+//   make: "BMW",
+//   model: "X3",
+//   year: 2025,
+// };
+// console.log(cars);
+
+// 2. Using the car object you created, write a program that prints the value of the model
+// and year properties using both dot notation and bracket notation.
+// const cars2 = {
+//   make: "BMW",
+//   model: "X3",
+//   year: 2025,
+// };
+// console.log(cars2.model);
+// console.log(cars2.year);
+// console.log(cars2["model"]);
+// console.log(cars2["year"]);
+
+// 3. Write a program that adds a new property color to the car object and then removes the
+// year property. Print the object after each operation.
+// const cars3 = {
+//   make: "BMW",
+//   model: "X3",
+//   year: 2025,
+// };
+
+// cars3.color = "blue";
+// console.log(cars3);
+
+// delete cars3.year;
+// console.log(cars3);
+
+// 4. Extend the car object by adding a method called getCarInfo that returns a string
+// containing the car’s make and model. Call this method and print the result.
+
+//FAIL
+
+// 5. Write a program that creates an object to represent a person. The person object should
+// have properties for name, age, and an address object. The address object should have
+// properties for street, city, and country. Access and print the street and country of the
+// person's address.
+
+// const person = {
+//   name: "Vlon",
+//   age: "21",
+//   address: {
+//     street: "123idontcare",
+//     city: "NYC",
+//     country: "US,",
+//   },
+// };
+// console.log("Street:", person.address["street"]);
+// console.log("Country:", person.address["country"]);
+
+// 6. Write a program that creates a student object with properties for name, age, and an
+// array of grades. Print the student's average grade
+// const student = {
+//   name: "Vlon",
+//   age: 33,
+//   grades: [7, 9, 10, 8],
+// };
+// const totalGrades = student.grades.reduce((acc, cur) => acc + cur);
+// const avgGrade = totalGrades / student.grades.length;
+// console.log(avgGrade);
+
+//////////////////////////////////////////////////////////////////////
+//Destructuring, Rest and Spread Operators
+////////////////////////////////////////////////////////////////////
+
+// 1. Write a program that uses array destructuring to extract the first two elements from an
+// array of numbers. Print the extracted values.
+// const destructureArr = [8, 2, 6, 7, 4, 1, 6];
+// const [first, second] = destructureArr;
+// console.log(first, second);
+
+// 2. Create an object representing a book with properties: title, author, and year. Use
+// object destructuring to extract the title and author, and print them.
+
+// const book = {
+//   title: "Chronicle in Stone",
+//   author: "Ismail Kadare",
+//   year: 1980,
+// };
+// const { title, author } = book;
+// console.log(title, author);
+
+// 3. Modify the previous assignment to include default values for title and publisher when
+// destructuring. If the publisher property is not available in the object, it should default
+// to "Unknown".
+
+//Failed
+
+// 4. Create a function named sum that uses the rest operator to accept any number of
+// arguments and returns their sum. Call this function with different sets of numbers.
+// function sum(...num) {
+//   const total = num.reduce((acc, cur) => acc + cur, 0);
+//   return total;
+// }
+// console.log(sum(5, 5, 9, 7));
+// console.log(sum(2, 6, 4, 7));
+
+// 5. Write a program that creates two arrays and uses the spread operator to merge them
+// into a new array. Print the new array.
+// const arr1 = [5, 8, 9, 6, 3, 2];
+// const arr2 = [3, 5, 9];
+// const mergeArrays = [...arr1, ...arr2];
+// console.log(mergeArrays);
+
+// 6. Create two objects representing a person and a contact. Use the spread operator to
+// create a new object that combines both. Print the new object.
+
+// const person = {
+//   name: "Hasan",
+//   age: 75,
+//   country: "Albania",
+// };
+
+// const contact = {
+//   cel: 394589,
+//   add: "Rruga B",
+//   facebook: "Fan Noli",
+// };
+// const mergeObj = { ...person, ...contact };
+// console.log(mergeObj);
+
+// 7. Write a program that demonstrates nested destructuring with an object that contains
+// an array. Create an object with a property grades that is an array, and destructure it to
+// extract the first grade.
+
+const student2 = {
+  name: "Vlon",
+  age: 33,
+  city: "Peja",
+  grades: [7, 9, 10, 8],
+};
+const {
+  grades: [first],
+} = student2;
+console.log(first);
+
+// 8. Create a program that demonstrates renaming during destructuring. Create an object
+// representing a user with properties username and email. When destructuring, rename
+// username to user and print both values
+
+//Fail
