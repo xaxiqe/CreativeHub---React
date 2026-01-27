@@ -3,7 +3,7 @@ function TextFormat({ text }) {
     <p
       style={{
         textAlign: "center",
-        marginTop: "20",
+        marginTop: "20px",
         margin: "0 auto",
         width: "50%",
       }}
