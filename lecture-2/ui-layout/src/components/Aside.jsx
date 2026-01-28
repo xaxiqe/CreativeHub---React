@@ -1,7 +1,8 @@
 import AsideCard from "./AsideCard";
 function Aside() {
   return (
-    <div
+    <section
+      aria-label="side part of contnet"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -12,7 +13,7 @@ function Aside() {
       <AsideCard title="The News" />
       <AsideCard title="Libro" />
       <AsideCard title="Elite" />
-    </div>
+    </section>
   );
 }
 export default Aside;
