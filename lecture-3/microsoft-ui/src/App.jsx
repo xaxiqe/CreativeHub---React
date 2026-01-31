@@ -1,6 +1,10 @@
-import Counter from "./components/Counter";
+import Header from "./components/Header/Header";
 function App() {
-  return <Counter />;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
