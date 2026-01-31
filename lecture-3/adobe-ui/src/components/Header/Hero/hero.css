@@ -3,12 +3,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 .hero-left {
-  flex: 1;
   max-width: 520px;
 }
 .hero-left h1 {
@@ -24,20 +23,18 @@
 }
 
 .hero-right {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 620px;
+  max-width: 520px;
 }
 
 .hero-logo {
   width: 48px;
   height: 48px;
-  display: block;
+
   margin-bottom: 1.6rem;
 }
 
@@ -50,8 +47,4 @@
   background: #0f70d1;
   color: rgb(255, 255, 255);
   cursor: pointer;
-}
-
-.hero-img {
-  width: 100%;
 }

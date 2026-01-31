@@ -1,0 +1,36 @@
+.footer {
+  background: #f2f2f2;
+  padding: 4rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.4rem;
+}
+
+.footer-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.footer-link:hover {
+  color: blue;
+}
