@@ -1,0 +1,25 @@
+.action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.call-to-action {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.call-to-action p {
+  margin: 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.call-to-action a {
+  text-decoration: underline;
+  color: rgb(63, 63, 215);
+}

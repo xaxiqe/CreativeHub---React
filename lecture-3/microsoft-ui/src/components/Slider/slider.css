@@ -1,0 +1,21 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: fit-content;
+  height: auto;
+  padding: 2rem;
+  border: 2px solid rgb(225, 220, 220);
+  border-radius: 20px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.slider-pic {
+  max-width: 400px;
+  border-radius: 12px;
+}

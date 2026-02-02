@@ -1,0 +1,55 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 3.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-logo {
+  color: #e60023;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.list {
+  list-style: none;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-sm {
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid #b9b6b6;
+  background: #f5f4f4;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-sm:hover {
+  opacity: 0.9;
+}

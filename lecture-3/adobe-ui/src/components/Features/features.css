@@ -1,0 +1,40 @@
+.features {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.features-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.headline {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.features-text {
+  margin: 0;
+  color: #555;
+  font-size: 1.6rem;
+}
+
+.features-pic {
+  width: 3.2rem;
+  height: 3.2rem;
+}

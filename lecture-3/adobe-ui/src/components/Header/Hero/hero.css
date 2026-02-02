@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.hero-left {
+  max-width: 520px;
+}
+.hero-left h1 {
+  font-size: 3.6rem;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+}
+
+.hero-left p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img {
+  max-width: 520px;
+}
+
+.hero-logo {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 1.6rem;
+}

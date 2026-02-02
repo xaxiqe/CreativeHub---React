@@ -1,0 +1,61 @@
+.section-cards {
+  display: flex;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  gap: 2rem;
+  width: 80%;
+}
+.card-link {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(45, 42, 42);
+  margin-top: 0.2rem;
+  padding: 1rem;
+  background-color: #9fb1ec;
+  border-radius: 8px;
+  margin-left: 1rem;
+}
+
+.card-pic {
+  width: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  border-radius: 30px;
+}
+.card-headline {
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+  padding: 1rem;
+}
+.card-text {
+  font-size: 1.4rem;
+  color: #555;
+  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 1.6rem;
+  padding: 1rem;
+}
+
+.single-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 1.2rem;
+  border: 2px solid rgb(225, 220, 220);
+  border-radius: 30px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.card-btn {
+  margin-top: 3rem;
+  padding-left: 0.4rem;
+  font-size: 1.4rem;
+  text-align: left;
+}
