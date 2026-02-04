@@ -5,7 +5,7 @@ function FooterCard({ title, text, className = "" }) {
   return (
     <div>
       <h2 className="font-bold">{title}</h2>
-      <img src={laptopImg} alt="laptop" className="w-50 h-50 rounded" />
+      <img src={laptopImg} alt="laptop" className="w-50 h-50 rounded-2xl" />
       <TextFormat className={className} text={text} />
     </div>
   );
