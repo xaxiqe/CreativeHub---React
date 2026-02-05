@@ -4,7 +4,7 @@ import laptopImg from "../assets/laptop-realistic_78370-511.avif";
 function Main() {
   return (
     <section
-      className="max-w-7xl  flex justify-center mx-auto items-center  "
+      className="max-w-6xl  flex justify-center mx-auto items-center  "
       aria-label="Main content"
     >
       <div>

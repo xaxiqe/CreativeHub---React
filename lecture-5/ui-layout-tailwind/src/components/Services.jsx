@@ -2,7 +2,7 @@ import ServiceCard from "./ServiceCard";
 
 function Services() {
   return (
-    <div className="container mx-auto flex justify-center mt-10 py-10 rounded-xl bg-gray-500/20 p-6">
+    <div className="max-w-6xl mx-auto flex justify-center mt-10 py-10 rounded-xl bg-gray-500/20 p-6">
       <ServiceCard
         className="text-lg mt-2 "
         title="Conslulting"
