@@ -1,17 +1,14 @@
-function ProductItems({ image, info }) {
+function ProductItems({ image, info, sizeClass = "w-full h-64" }) {
   return (
-    <div className="py-8">
-      <div>
-        {image && (
-          <img
-            className="w-full h-75 mb-4 object-cover rounded-xl"
-            src={image}
-            alt="prod images"
-          />
-        )}
-      </div>
-      <span className="text-2xl text-gray-900 ">{info}</span>
-    </div>
+    <article className="py-8">
+      <img
+        src={image}
+        alt={info}
+        className={`object-cover rounded-2xl mx-auto ${sizeClass}`}
+      />
+      <p className="mt-3 text-xl font-semibold text-center">{info}</p>
+    </article>
   );
 }
+
 export default ProductItems;

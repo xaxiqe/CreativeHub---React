@@ -7,14 +7,14 @@ import Features from "./components/Features/Features";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
       <Services />
       <Action />
       <Footer />
       <Features />
-    </div>
+    </>
   );
 }
 

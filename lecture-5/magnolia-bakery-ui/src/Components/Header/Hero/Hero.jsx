@@ -8,6 +8,7 @@ function Hero() {
         bg-center
         flex
         items-center
+        
       "
       style={{
         backgroundImage:

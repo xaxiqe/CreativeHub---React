@@ -35,7 +35,7 @@ const Pictures = [
 ];
 function Products() {
   return (
-    <div className="py-8">
+    <div className="py-8 mt-24 mb-24">
       <div className="text-center mb-8">
         <h2 className="text-6xl font-mono font-bold">Our Products</h2>
         <p className="text-3xl  mt-2 tracking-wide">
