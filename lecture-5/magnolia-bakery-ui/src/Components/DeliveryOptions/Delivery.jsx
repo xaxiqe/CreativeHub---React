@@ -1,4 +1,6 @@
 import ProductItems from "../Products/ProductItems";
+import Headlines from "../../shared/Headlines";
+import Button from "../../shared/Button";
 const Pictures = [
   {
     id: 1,
@@ -23,23 +25,12 @@ const Pictures = [
 function Delivery() {
   return (
     <div className="py-12  ">
-      <div className="text-center mb-10">
-        <h2 className="text-6xl font-mono font-bold">
-          Delivery and Pick Up Options
-        </h2>
-        <p className="text-3xl  mt-2 tracking-wide ">
-          We make it easy for you to get Magnolia Bakery’s best, <br />
-          wherever you are. Order now for nationwide shipping, place an order to
-          pickup at your local shop, or get in touch <br />
-          with our team to arrange custom catering for your next event.
-        </p>
-        <a
-          className="text-violet-950 leading-wide text-2xl bg-violet-400 rounded-xl p-4 hover:bg-violet-600 hover:text-white inline-block mt-4"
-          href="#"
-        >
-          Learn More!
-        </a>
-      </div>
+      <Headlines
+        products="Delivery and Pick Up Options"
+        headline="We make it easy for you to get Magnolia Bakery’s best, wherever you are. Order now for nationwide shipping, place an order to pickup at your local shop, or get in touch with our team to arrange custom catering for your next event."
+      />
+      <Button btn="GET A QUOTE" />
+
       <div className="flex flex-wrap justify-center gap-6 p-4">
         {Pictures.map((pics) => (
           <ProductItems

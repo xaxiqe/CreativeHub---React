@@ -4,17 +4,19 @@ import Products from "./Components/Products/Products";
 import NewProducts from "./Components/NewProducts/NewProducts";
 import Delivery from "./Components/DeliveryOptions/Delivery";
 import Catering from "./Components/CateringOffers/Catering";
+import Favorites from "./Components/Favorites/Favorites";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
+      <Favorites />
       <Products />
       <NewProducts />
       <Delivery />
       <Catering />
-    </div>
+    </>
   );
 }
 

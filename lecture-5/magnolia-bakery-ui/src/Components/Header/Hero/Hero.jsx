@@ -1,3 +1,4 @@
+import Button from "../../../shared/Button";
 function Hero() {
   return (
     <section
@@ -22,10 +23,7 @@ function Hero() {
           <p className="text-3xl mb-6 ">
             Handmade cakes, cupcakes, and classic American treats.
           </p>
-
-          <button className="text-violet-950 leading-wide text-2xl bg-violet-400 p-4 hover:bg-violet-600 hover:text-white px-6 py-3 rounded-full font-medium">
-            Order Now
-          </button>
+          <Button btn="Order Now" align={"text-left"} />
         </div>
       </div>
     </section>
