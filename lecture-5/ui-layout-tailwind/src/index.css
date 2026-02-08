@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.bg-image-costum {
+  background-image: url(../src/assets/book-open-pages-close-up-600nw-2562942291.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+
+body {
+  font-family: sans-serif;
+}
