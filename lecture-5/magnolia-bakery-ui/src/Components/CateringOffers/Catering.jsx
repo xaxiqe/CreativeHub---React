@@ -1,5 +1,3 @@
-const Image =
-  "https://www.magnoliabakery.com/cdn/shop/files/website02_1280x.png?v=1651002817";
 function Catering() {
   return (
     <section className="flex w-full py-24">
@@ -20,7 +18,11 @@ function Catering() {
           Get Started
         </a>
       </div>
-      <img src={Image} alt="Catering picture" className="w-full h-[60vh]" />
+      <img
+        src="https://www.magnoliabakery.com/cdn/shop/files/website02_1280x.png?v=1651002817"
+        alt="Catering picture"
+        className="w-full h-[60vh]"
+      />
     </section>
   );
 }
