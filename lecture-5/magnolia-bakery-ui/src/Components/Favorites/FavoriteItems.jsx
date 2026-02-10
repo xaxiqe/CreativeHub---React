@@ -1,7 +1,7 @@
 import cn from "../../utils/cn";
 import { useState } from "react";
 
-const MAX_CHARS = 140;
+const MAX_CHARS = 100;
 function FavoriteItems({
   image,
   info,
@@ -12,8 +12,6 @@ function FavoriteItems({
   description,
   sizeClass = "w-full h-64",
 }) {
-  const MAX = 150;
-
   const [isFavorite, setIsFavorite] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -27,7 +25,13 @@ function FavoriteItems({
   const decrease = () => {
     setQuantity(quantity > 1 ? quantity - 1 : quantity);
   };
+  const [isReadMore, setIsReadMore] = useState(false);
+  const readMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+
   const totalPrice = (quantity * price).toFixed(2);
+
   return (
     <article className="w-full max-w-sm py-8">
       <img
@@ -64,8 +68,15 @@ function FavoriteItems({
         </div>
       </div>
 
-      <p className="mt-3 mb-2 text-sm text-gray-600 whitespace-normal ">
-        {description}
+      <p className="mt-3 mb-2 text-2xl text-gray-600 whitespace-normal ">
+        {isReadMore
+          ? description
+          : `${description.slice(0, MAX_CHARS)}${description.length > MAX_CHARS ? "..." : ""}`}
+        {description.length > MAX_CHARS && (
+          <button onClick={readMore} className="text-2xl text-violet-500">
+            Read {isReadMore ? "less" : "more"}
+          </button>
+        )}
       </p>
 
       <button

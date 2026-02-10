@@ -42,8 +42,7 @@ const Pictures = [
       "https://www.magnoliabakery.com/cdn/shop/products/MiniIceboxBars_1_25868_500x.jpg?v=1632989401",
     info: "Sampler Packs",
     price: 7.5,
-    description:
-      "Can’t decide between banana pudding and cupcakes? Get both! Our sampler packs include an assortment of two fan favorites: World-Famous, fresh Banana Pudding and our delicious cupcakes. This cupcake 2-pack lets you indulge both of your cupcake cravings: one rich",
+    description: "Can’t decide between: one rich",
     button: "Order Now!",
   },
   {
