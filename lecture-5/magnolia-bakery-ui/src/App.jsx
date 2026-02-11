@@ -5,6 +5,7 @@ import NewProducts from "./Components/NewProducts/NewProducts";
 import Delivery from "./Components/DeliveryOptions/Delivery";
 import Catering from "./Components/CateringOffers/Catering";
 import Favorites from "./Components/Favorites/Favorites";
+import Accordion from "./Components/Accordion";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <NewProducts />
       <Delivery />
       <Catering />
+      <Accordion />
     </>
   );
 }
