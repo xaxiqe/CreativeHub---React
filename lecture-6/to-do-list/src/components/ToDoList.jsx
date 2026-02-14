@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../shared/Button";
+import Task from "./Task";
 
 function ToDoList() {
   const [tasks, setTasks] = useState([
@@ -14,14 +15,22 @@ function ToDoList() {
   };
 
   const addTask = () => {
-    setTasks((task) => [...task, newTask].reverse());
+    setTasks((task) => [...task, newTask]);
     setNewTask("");
   };
 
   const deleteTask = (id) => {
     setTasks((prev) => prev.filter((_, index) => id !== index));
   };
-  const editTask = (id) => {};
+  const editTask = (idx, newValue) => {
+    setTasks(
+      tasks.map((task, index) => {
+        if (index == idx) return newValue;
+        return task;
+      }),
+    );
+  };
+
   return (
     <div className="container mt-20">
       <h1 className="text-4xl font-semibold text-blue-700 text-center mb-5">
@@ -39,19 +48,13 @@ function ToDoList() {
       </div>
       <ul className="flex flex-col mt-5 items-center gap-3">
         {tasks.map((task, index) => (
-          <li className="max-w-md w-full" key={index}>
-            <span className=" flex items-center justify-between w-full px-4 py-3 border rounded-lg text-xl text-gray-600 bg-gray-50">
-              {task}
-              <div className="flex gap-2">
-                <Button
-                  button="Delete"
-                  color="red"
-                  onClick={() => deleteTask(index)}
-                />
-                <Button button="Edit" color="blue" onClick={editTask} />
-              </div>
-            </span>
-          </li>
+          <Task
+            key={index}
+            index={index}
+            task={task}
+            deleteTask={deleteTask}
+            editTask={editTask}
+          />
         ))}
       </ul>
 
