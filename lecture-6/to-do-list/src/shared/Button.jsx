@@ -1,4 +1,4 @@
-function Button({ color = "blue", button, ...props }) {
+function Button({ color = "blue", button, onClick }) {
   let classes = "px-4 py-2 rounded-xl text-white";
   if (color === "blue") {
     classes += " bg-blue-500  hover:bg-blue-400";
@@ -9,7 +9,7 @@ function Button({ color = "blue", button, ...props }) {
   }
   return (
     <>
-      <button {...props} className={classes}>
+      <button onClick={onClick} className={classes}>
         {button}
       </button>
     </>

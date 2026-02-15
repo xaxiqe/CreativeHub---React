@@ -2,13 +2,13 @@ import { useState } from "react";
 import Button from "../shared/Button";
 import Input from "../shared/Input";
 
+const cToF = (c) => c * (9 / 5) + 32;
+const fToC = (f) => (f - 32) * (5 / 9);
+
 function WeatherCard({ from, to, fromUnit, toUnit }) {
   const [fromValue, setFromValue] = useState("");
   const [toValue, setToValue] = useState("");
   const [history, setHistory] = useState([]);
-
-  const cToF = (c) => c * (9 / 5) + 32;
-  const fToC = (f) => (f - 32) * (5 / 9);
 
   const convert = (num) => {
     if (from === "C" && to === "F") return cToF(num);
@@ -20,16 +20,11 @@ function WeatherCard({ from, to, fromUnit, toUnit }) {
 
   const handleConvert = () => {
     const num = Number(fromValue);
-    if (fromValue === "" || Number.isNaN(num)) return;
+    if (fromValue === "") return;
 
-    const result = convert(num);
-    const rounded = Math.round(result * 10) / 10;
+    const result = convert(num).toFixed(1);
 
-    setToValue(String(rounded));
-    setHistory((prev) => [
-      `${num} ${fromUnit} → ${rounded} ${toUnit}`,
-      ...prev,
-    ]);
+    setHistory((prev) => [`${num} ${fromUnit} → ${result} ${toUnit}`, ...prev]);
   };
 
   const handleReset = () => {
@@ -47,7 +42,7 @@ function WeatherCard({ from, to, fromUnit, toUnit }) {
       <Button onClick={handleConvert} btn="Convert" />
 
       <div className="flex items-center gap-2">
-        <Input unit={toUnit} value={toValue} readOnly />
+        <Input unit={toUnit} value={toValue} />
       </div>
 
       {history.length > 0 && (

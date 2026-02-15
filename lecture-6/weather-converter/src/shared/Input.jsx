@@ -1,4 +1,4 @@
-function Input({ unit, value, onChange, readOnly = false }) {
+function Input({ unit, value, onChange }) {
   return (
     <>
       <h3 className="text-2xl text-gray-600">{unit}</h3>
@@ -7,7 +7,6 @@ function Input({ unit, value, onChange, readOnly = false }) {
         type="number"
         value={value}
         onChange={onChange}
-        readOnly={readOnly}
         min="1"
       />
     </>
