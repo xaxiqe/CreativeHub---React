@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar";
 import Cart from "./pages/Cart";
 import ProductFilter from "./pages/ProductFilter";
 import ExpenseTracker from "./pages/ExpenseTracker";
+
 import Counter from "./pages/Counter";
 import TaskManager from "./pages/TaskManager";
 
