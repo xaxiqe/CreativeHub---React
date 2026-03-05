@@ -8,7 +8,8 @@ const Pictures = [
       "https://www.magnoliabakery.com/cdn/shop/products/92edb133-7d0b-4050-8984-fce180ed4ba0_500x.jpg?v=1632768575",
     info: "Cupcakes",
     price: 12.5,
-
+    description:
+      "The perfect duo for your date night, Enjoy two cups of our Classic Banana Pudding paired with your choice of six indulgent Chocolate-Covered Strawberry Brownie Bites or two of our signature Cupid's Cupcakes.",
     button: "Order Now!",
     outOfStock: true,
   },
@@ -19,6 +20,9 @@ const Pictures = [
     info: "Brownie and Bars",
     price: 2.5,
     button: "Order Now!",
+    description:
+      "Can’t decide between banana pudding and cupcakes? Get both! Our sampler packs include an assortment of two fan favorites: World-Famous, fresh Banana Pudding and our delicious cupcakes. This cupcake 2-pack lets you indulge both of your cupcake cravings: one rich",
+    button: "Order Now!",
   },
 
   {
@@ -28,7 +32,8 @@ const Pictures = [
     info: "Cakes",
     price: 20.0,
     button: "Order Now!",
-
+    description:
+      "This cookie features our soft-baked, Banana Pudding-packed cookies with a delicious twist - our famous Red Velvet cake!",
     outOfStock: true,
   },
   {
@@ -37,6 +42,7 @@ const Pictures = [
       "https://www.magnoliabakery.com/cdn/shop/products/MiniIceboxBars_1_25868_500x.jpg?v=1632989401",
     info: "Sampler Packs",
     price: 7.5,
+    description: "Can’t decide between: one rich",
     button: "Order Now!",
   },
   {
@@ -46,6 +52,8 @@ const Pictures = [
     info: "Banana Pudding",
     price: 6.5,
     button: "Order Now!",
+    description:
+      "This cookie features our soft-baked, Banana Pudding-packed , Our sampler packs include an assortment of two fan favorites: World-Famous,cookies with a delicious twist - our famous Red Velvet cake!",
   },
 ];
 function Favorites() {
@@ -67,6 +75,7 @@ function Favorites() {
             info={pics.info}
             price={pics.price}
             discountPrice={pics.discountPrice}
+            description={pics.description}
             button={pics.button}
             outOfStock={pics.outOfStock}
           />
