@@ -1,10 +1,15 @@
 import { NavLink } from "react-router-dom";
+import cn from "../utils/cn";
 
 function Navbar() {
   const linkStyles = ({ isActive }) =>
-    isActive
-      ? "text-blue-500 font-semibold "
-      : "text-gray-600 hover:text-black";
+    cn(
+      "text-2xl transition-colors",
+      isActive
+        ? "text-blue-500 font-semibold "
+        : "text-gray-600 hover:text-black",
+    );
+
   return (
     <nav className="container text-2xl flex justify-around mx-auto py-8 gap-2">
       <NavLink className={linkStyles} to="/">
