@@ -1,4 +1,4 @@
-function ShoppingCard({ cart, dispatch }) {
+function ShoppingCart({ cart, dispatch }) {
   return (
     <>
       <div className="container flex justify-around">
@@ -6,7 +6,7 @@ function ShoppingCard({ cart, dispatch }) {
         <div className="relative">
           <button className="text-4xl">🛒</button>
           <span className=" absolute top-0 right-1 w-5 h-5 text-white text-xs font-bold grid place-items-center rounded-full bg-blue-600">
-            {cart.length}
+            {cart.reduce((total, idx) => total + idx.quantity, 0)}
           </span>
         </div>
       </div>
@@ -15,20 +15,40 @@ function ShoppingCard({ cart, dispatch }) {
         {cart.map((item) => (
           <li
             className="flex justify-between items-center border p-3 rounded "
-            key={item}
+            key={item.id}
           >
             <span className="font-semibold text-2xl text-gray-400">
               {item.product}
             </span>
 
-            <span className="font-bold">{item.price}$</span>
+            <span className="font-bold">{item.price * item.quantity}$</span>
 
             <div className="flex gap-2">
-              <button className="px-2 bg-gray-300 hover:bg-black/50">-</button>
+              <button
+                onClick={() => {
+                  dispatch({
+                    type: "DecrementQuantity",
+                    payload: item.id,
+                  });
+                }}
+                className="px-2 bg-gray-300 hover:bg-black/50"
+              >
+                -
+              </button>
 
               <span>{item.quantity}</span>
 
-              <button className="px-2 bg-gray-300 hover:bg-black/50">+</button>
+              <button
+                onClick={() => {
+                  dispatch({
+                    type: "IncrementQuantity",
+                    payload: item.id,
+                  });
+                }}
+                className="px-2 bg-gray-300 hover:bg-black/50"
+              >
+                +
+              </button>
             </div>
             <button
               onClick={() => {
@@ -47,4 +67,4 @@ function ShoppingCard({ cart, dispatch }) {
     </>
   );
 }
-export default ShoppingCard;
+export default ShoppingCart;

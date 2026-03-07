@@ -16,7 +16,7 @@ const products = [
   {
     id: 3,
     product: "MacBook Nano",
-    price: 1600,
+    price: 1500,
     button: "AddToCart",
   },
   {
