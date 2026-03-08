@@ -1,5 +1,6 @@
 import ContextDemo from "./components/context-version/ContextDemo";
 import PropDemo from "./components/prop-version/PropDemo";
+import { ThemeProvider } from "./context/useThemeContext";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       </div>
 
       <div className="h-1/2">
-        <ContextDemo />
+        <ThemeProvider>
+          <ContextDemo />
+        </ThemeProvider>
       </div>
     </div>
   );

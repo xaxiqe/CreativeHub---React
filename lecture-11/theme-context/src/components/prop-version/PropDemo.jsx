@@ -13,7 +13,7 @@ function PropDemo() {
       }`}
     >
       <h2
-        className={`flex justify-center mt-5 text-2xl ${theme === "light" ? "text-black" : "text-white"}`}
+        className={`flex justify-center  text-2xl ${theme === "light" ? "text-black" : "text-white"}`}
       >
         Prop Demo
       </h2>

@@ -6,7 +6,7 @@ function Sidebar({ theme, toggleTheme }) {
       <h2
         className={`flex justify-center mt-10 text-2xl ${theme === "light" ? "text-black" : "text-white"}`}
       >
-        Sidebar
+        Sidebar Prop
       </h2>
       <ThemeButton theme={theme} toggleTheme={toggleTheme} />
     </div>
