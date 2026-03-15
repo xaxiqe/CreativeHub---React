@@ -4,14 +4,24 @@ function JokesApi() {
   const [jokes, setJokes] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchJokes = async () => {
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    const res = await fetch("https://v2.jokeapi.dev/joke/Any");
-    const data = await res.json();
-    setJokes((prev) => [...prev, { ...data, id: Date.now() }]);
-    setLoading(false);
+    setError(null);
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const res = await fetch("https://v2.jokeapi.dev/joke/Any");
+      if (!res.ok) {
+        throw new Error("Failed to fetch joke");
+      }
+      const data = await res.json();
+      setJokes((prev) => [...prev, { ...data, id: Date.now() }]);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -32,6 +42,7 @@ function JokesApi() {
       {loading && (
         <p className="text-center mt-3 text-gray-500">Loading joke...</p>
       )}
+      {error && <p className="text-red-500 text-center mt-3">{error}</p>}
 
       {jokes.map((joke) => {
         const isFavorite = favorites.includes(joke.id);
